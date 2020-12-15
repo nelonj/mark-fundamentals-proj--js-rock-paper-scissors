@@ -14,10 +14,7 @@ const weaknesses: Record<RPSChoice, RPSChoice> = {
   scissors: 'rock'
 }
 
-function playRound() {
-  const randomIdx = Math.floor(Math.random() * 3)
-  const computerChoice = Object.keys(acceptableVariants)[randomIdx] as RPSChoice
-  const userChoice = getUserChoice()
+function declareWinner(userChoice: RPSChoice, computerChoice: RPSChoice) {
   if (userChoice === computerChoice) {
     console.log(`You both chose ${computerChoice} - it's a draw!`)
   } else if (weaknesses[userChoice] === computerChoice) {
@@ -37,6 +34,13 @@ function getUserChoice(): RPSChoice {
     }
     console.log("Sorry, I don't recognise that as a choice! \n Please try 'rock', 'paper' or 'scissors' (without quotation marks).")
   }
+}
+
+function playRound() {
+  const randomIdx = Math.floor(Math.random() * 3)
+  const computerChoice = Object.keys(acceptableVariants)[randomIdx] as RPSChoice
+  const userChoice = getUserChoice()
+  declareWinner(userChoice, computerChoice)
 }
 
 playRound()
