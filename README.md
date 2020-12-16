@@ -37,7 +37,25 @@ As an extension, you will then try to extend the game by adding in some further 
 
 **Success criterion:** playing a few games of Rock Paper Scissors on your local machine by running the JavaScript programme written.
 
-TODO: add notes on this
+Firstly, clone this repository to your local machine in some sensible place, for example:
+
+```bash
+cd ~/Development/Academy # or wherever you're organising everything
+git clone git@github.com:richardcrng/mark-fundamentals-proj--js-rock-paper-scissors.git
+```
+
+Then, change into the new directory and install the files:
+
+```bash
+cd mark-fundamentals-proj--js-rock-paper-scissors
+yarn
+```
+
+Finally, run the programme!
+
+```bash
+yarn start
+```
 
 ## Exercise 2: Reading, understanding and documenting
 
