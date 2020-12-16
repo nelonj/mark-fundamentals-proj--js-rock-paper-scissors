@@ -48,7 +48,7 @@ function playRound() {
 
 function randomPick() {
   const choiceOptions = Object.keys(acceptableVariants);
-  const randomIndex = Math.floor(Math.random() * 3);
+  const randomIndex = Math.floor(Math.random() * choiceOptions.length);
   const computerChoice = choiceOptions[randomIndex];
   return computerChoice;
 }

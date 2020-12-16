@@ -126,4 +126,41 @@ Things that you should try to include (amongst other things):
 - What does `Math.floor(Math.random() * 3)` do and how does it help?
 - Why is there a `while` loop in `getUserChoice()`?
 
-## Exercise 3: Commentary
+## Exercise 4: Check your understanding
+
+Talk to a member of Faculty about your understanding of the game.
+
+(TODO: create a form for this?)
+
+## Exercise 5: Extend the game
+
+### Extension 1: Rock Paper Scissors Lizard Spock
+
+Rock Paper Scissors often ends in draws - something which some people think is a feature, and others think is a bug!
+
+Let's assume that reducing the likelihood of draws is desirable, and extend the game to [_Rock Paper Scissors Lizard Spock_](http://www.samkass.com/theories/RPSSL.html).
+
+(How to play? Check out [Sheldon Cooper's explanation](https://www.youtube.com/watch?v=Kov2G0GouBw).)
+
+1. The computer should randomly choose one of the five options
+2. All five options (and tolerable variants) should be allowed as input from the user
+3. The programme should correctly report back the result of a match
+
+### Extension 2: replay in a case of draw
+
+When you get a draw in RPS(cLSp), you often immediately replay the game.
+
+Currently, our programme doesn't do that!
+
+Add a feature where:
+
+1. If you draw, you are asked to play again (until there is an eventual winner)
+2. When there is a winner, the programme ends
+
+## Exercise 6: Commentary and reflection
+
+1. What are the main similarities and differences you can see between Python and JavaScript?
+2. How easy or difficult was it to understand the code?
+   1. What was easiest to understand? In what way?
+   2. What was hardest to understand? In what way?
+3. How easy or difficult was it to _add to_ the code?
