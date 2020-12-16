@@ -1,9 +1,9 @@
 {
-  "name": "mark-cli-proj--rock-paper-scissors",
+  "name": "mark-cli-proj--js-rock-paper-scissors",
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "ts-node src/index.ts",
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "ISC",
