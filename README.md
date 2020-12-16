@@ -41,7 +41,7 @@ Firstly, clone this repository to your local machine in some sensible place, for
 
 ```bash
 cd ~/Development/Academy # or wherever you're organising everything
-git clone git@github.com:richardcrng/mark-fundamentals-proj--js-rock-paper-scissors.git
+git clone git@github.com:WeAreAcademy/mark-fundamentals-proj--js-rock-paper-scissors.git
 ```
 
 Then, change into the new directory and install the files:
