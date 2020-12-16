@@ -12,7 +12,7 @@ tags:
   - wip
 ---
 
-# Rock Paper Scissors (Lizard Spock)
+# Rock Paper Scissors
 
 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a>
 
@@ -35,7 +35,7 @@ As an extension, you will then try to extend the game by adding in some further 
 
 ## Exercise 1: Installing and demoing
 
-**Success criterion:** playing a few games of Rock Paper Scissors on your local machine by running the programme written.
+**Success criterion:** playing a few games of Rock Paper Scissors on your local machine by running the JavaScript programme written.
 
 TODO: add notes on this
 
@@ -97,7 +97,9 @@ Things you might try doing:
 
 ### e) Produce a narrative document.
 
-We suggest you
+One way you could do this would be to explain a few different games of Rock Paper Scissors
+
+A good narrative document for this game would walk through a few different games of Rock Paper Scissors and explain how the programme code is leading to the terminal output. (Screenshots of the terminal and/or snippets of programme code are likely to be helpful here.)
 
 Things that you should try to include (amongst other things):
 
