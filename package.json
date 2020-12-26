@@ -8,6 +8,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "readline-sync": "^1.4.10",
+    "readline-sync": "^1.4.10"
   }
 }
