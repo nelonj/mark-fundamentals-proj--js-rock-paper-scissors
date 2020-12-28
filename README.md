@@ -128,11 +128,15 @@ Things that you should try to include (amongst other things):
 
 ## Exercise 4: Check your understanding
 
+**Success criterion:** a conversation with a Faculty member and amended comments.
+
 Talk to a member of Faculty about your understanding of the game.
 
-(TODO: create a form for this?)
+Amend the comments on your copy of the code for any important points that come out of the conversation.
 
 ## Exercise 5: Extend the game
+
+**Success criterion:** a game which can be playtested and which satisfies the specified requirements for each extension.
 
 ### Extension 1: Rock Paper Scissors Lizard Spock
 
@@ -141,6 +145,8 @@ Rock Paper Scissors often ends in draws - something which some people think is a
 Let's assume that reducing the likelihood of draws is desirable, and extend the game to [_Rock Paper Scissors Lizard Spock_](http://www.samkass.com/theories/RPSSL.html).
 
 (How to play? Check out [Sheldon Cooper's explanation](https://www.youtube.com/watch?v=Kov2G0GouBw).)
+
+**Requirements**
 
 1. The computer should randomly choose one of the five options
 2. All five options (and tolerable variants) should be allowed as input from the user
@@ -152,12 +158,16 @@ When you get a draw in RPS(cLSp), you often immediately replay the game.
 
 Currently, our programme doesn't do that!
 
+**Requirements**
+
 Add a feature where:
 
 1. If you draw, you are asked to play again (until there is an eventual winner)
 2. When there is a winner, the programme ends
 
 ## Exercise 6: Commentary and reflection
+
+**Success criterion:** documented reflections.
 
 1. What are the main similarities and differences you can see between Python and JavaScript?
 2. How easy or difficult was it to understand the code?
