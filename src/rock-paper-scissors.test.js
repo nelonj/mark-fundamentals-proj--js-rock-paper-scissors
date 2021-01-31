@@ -30,3 +30,11 @@ test("asStandardChoice returns a standardised choice version of a string", () =>
   expect(asStandardChoice("s")).toBe("scissors");
   expect(asStandardChoice("S")).toBe("scissors");
 });
+
+test("asStandardChoice returns undefined for random other input", () => {
+  expect(asStandardChoice("apple")).toBeUndefined();
+  expect(asStandardChoice("bananas")).toBeUndefined();
+  expect(asStandardChoice("Z")).toBeUndefined();
+  expect(asStandardChoice(12321)).toBeUndefined();
+  expect(asStandardChoice(["rock"])).toBeUndefined();
+});
