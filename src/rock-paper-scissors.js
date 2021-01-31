@@ -4,20 +4,6 @@ const acceptableVariants = {
   scissors: ["scissors", "Scissors", "s", "S"],
 };
 
-function declareWinner(userPick, computerPick) {
-  if (userPick === computerPick) {
-    console.log(`You both chose ${computerPick} - it's a draw!`);
-  } else if (weaknesses[userPick] === computerPick) {
-    console.log(
-      `The computer's ${computerPick} beat your ${userPick}! Bad luck...`
-    );
-  } else {
-    console.log(
-      `Your ${userPick} beat the computer's ${computerPick}! You are a mighty champion!`
-    );
-  }
-}
-
 function asStandardChoice(inputStr) {
   /** An nested array: array of array of strings */
   const arrayOfVariantArrays = Object.values(acceptableVariants);
@@ -37,6 +23,20 @@ function isWinningChoice(firstChoice, secondChoice) {
   return weaknesses[secondChoice] === firstChoice;
 }
 
+function declareWinner(userPick, computerPick) {
+  if (userPick === computerPick) {
+    console.log(`You both chose ${computerPick} - it's a draw!`);
+  } else if (weaknesses[userPick] === computerPick) {
+    console.log(
+      `The computer's ${computerPick} beat your ${userPick}! Bad luck...`
+    );
+  } else {
+    console.log(
+      `Your ${userPick} beat the computer's ${computerPick}! You are a mighty champion!`
+    );
+  }
+}
+
 function getUserChoice() {
   while (true) {
     const answer = prompt("Your choice: rock, paper or scissors? \n> ");
@@ -50,6 +50,8 @@ function getUserChoice() {
     );
   }
 }
+
+function makeResultMessage(userChoice, computerChoice) {}
 
 function playRound() {
   const computerChoice = randomPick();
@@ -67,5 +69,6 @@ function randomPick() {
 module.exports = {
   asStandardChoice,
   isWinningChoice,
+  makeResultMessage,
   playRound,
 };
