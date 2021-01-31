@@ -18,13 +18,13 @@ function declareWinner(userPick, computerPick) {
   }
 }
 
-function isPlayerWinner(playerChoice, computerChoice) {
+function isWinningChoice(firstChoice, secondChoice) {
   const weaknesses = {
     rock: "paper",
     paper: "scissors",
     scissors: "rock",
   };
-  return weaknesses[computerChoice] === playerChoice;
+  return weaknesses[secondChoice] === firstChoice;
 }
 
 function getUserChoice() {
@@ -55,6 +55,6 @@ function randomPick() {
 }
 
 module.exports = {
-  isPlayerWinner,
+  isWinningChoice,
   playRound,
 };
