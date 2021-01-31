@@ -4,12 +4,6 @@ const acceptableVariants = {
   scissors: ["scissors", "Scissors", "s", "S"],
 };
 
-const weaknesses = {
-  rock: "paper",
-  paper: "scissors",
-  scissors: "rock",
-};
-
 function declareWinner(userPick, computerPick) {
   if (userPick === computerPick) {
     console.log(`You both chose ${computerPick} - it's a draw!`);
@@ -22,6 +16,15 @@ function declareWinner(userPick, computerPick) {
       `Your ${userPick} beat the computer's ${computerPick}! You are a mighty champion!`
     );
   }
+}
+
+function isPlayerWinner(playerChoice, computerChoice) {
+  const weaknesses = {
+    rock: "paper",
+    paper: "scissors",
+    scissors: "rock",
+  };
+  return weaknesses[userPick] === computerPick;
 }
 
 function getUserChoice() {
@@ -52,5 +55,6 @@ function randomPick() {
 }
 
 module.exports = {
+  isPlayerWinner,
   playRound,
 };
