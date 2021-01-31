@@ -18,7 +18,15 @@ function declareWinner(userPick, computerPick) {
   }
 }
 
-function asStandardChoice(inputStr) {}
+function asStandardChoice(inputStr) {
+  /** An nested array: array of array of strings */
+  const arrayOfVariantArrays = Object.values(acceptableVariants);
+  for (let variantArray of arrayOfVariantArrays) {
+    if (variantArray.includes(inputStr)) {
+      return variantArray[0];
+    }
+  }
+}
 
 function isWinningChoice(firstChoice, secondChoice) {
   const weaknesses = {
@@ -57,6 +65,7 @@ function randomPick() {
 }
 
 module.exports = {
+  asStandardChoice,
   isWinningChoice,
   playRound,
 };
