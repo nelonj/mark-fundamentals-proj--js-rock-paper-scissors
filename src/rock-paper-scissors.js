@@ -24,7 +24,7 @@ function isPlayerWinner(playerChoice, computerChoice) {
     paper: "scissors",
     scissors: "rock",
   };
-  return weaknesses[userPick] === computerPick;
+  return weaknesses[computerChoice] === playerChoice;
 }
 
 function getUserChoice() {
