@@ -57,6 +57,8 @@ Finally, run the programme!
 yarn start
 ```
 
+(Note that this is using the `start` script specified in `package.json` - just as you can run Python files with `python path/to/script.py`, you can run JavaScript files with `node path/to/script.js`.)
+
 ## Exercise 2: Reading, understanding and documenting
 
 **Success criterion:** a document which outlines how you think this JavaScript programme works. You don't have to achieve a theory which explains 100%, but you should strive to explain as much as possible.
