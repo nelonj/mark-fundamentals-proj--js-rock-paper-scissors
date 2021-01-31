@@ -57,7 +57,10 @@ Finally, run the programme!
 yarn start
 ```
 
-(Note that this is using the `start` script specified in `package.json` - just as you can run Python files with `python path/to/script.py`, you can run JavaScript files with `node path/to/script.js`.)
+### Some installation notes of interest
+
+1. `yarn start` is using the `start` script specified in `package.json` - just as you can run Python files with `python path/to/script.py`, you can run JavaScript files with `node path/to/script.js`.
+2. `jest` is listed under `devDependencies`, with `readline-sync` under `dependencies` - but both get installed when you run `yarn`. You can [read a bit about the difference in the NPM docs](https://docs.npmjs.com/specifying-dependencies-and-devdependencies-in-a-package-json-file).
 
 ## Exercise 2: Reading, understanding and documenting
 
