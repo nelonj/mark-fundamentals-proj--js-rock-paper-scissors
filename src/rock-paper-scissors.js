@@ -1,3 +1,6 @@
+// loading a function from an external dependency
+const prompt = require("readline-sync").question;
+
 const acceptableVariants = {
   rock: ["rock", "Rock", "r", "R"],
   paper: ["paper", "Paper", "p", "P"],
@@ -14,6 +17,11 @@ function asStandardChoice(inputStr) {
   }
 }
 
+function declareWinner(userPick, computerPick) {
+  const resultMessage = makeResultMessage(userPick, computerPick);
+  console.log(resultMessage);
+}
+
 /**
  * Check if the first choice beats the second choice
  */
@@ -26,31 +34,19 @@ function isWinningChoice(firstChoice, secondChoice) {
   return weaknesses[secondChoice] === firstChoice;
 }
 
-function declareWinner(userPick, computerPick) {
-  if (userPick === computerPick) {
-    console.log(`You both chose ${computerPick} - it's a draw!`);
-  } else if (weaknesses[userPick] === computerPick) {
-    console.log(
-      `The computer's ${computerPick} beat your ${userPick}! Bad luck...`
-    );
-  } else {
-    console.log(
-      `Your ${userPick} beat the computer's ${computerPick}! You are a mighty champion!`
-    );
-  }
-}
-
 function getUserChoice() {
   while (true) {
     const answer = prompt("Your choice: rock, paper or scissors? \n> ");
-    for (let [choice, variants] of Object.entries(acceptableVariants)) {
-      if (variants.includes(answer)) {
-        return choice;
-      }
+    const standardisedChoice = asStandardChoice(answer);
+    if (standardisedChoice) {
+      // if choice can be standardised, we can exit out of the while loop with a return of the standardisd choice
+      return standardisedChoice;
+    } else {
+      // otherwise, log a helpful message and continue the while loop
+      console.log(
+        "Sorry, I don't recognise that as a choice! \nPlease try 'rock', 'paper' or 'scissors' (without quotation marks)."
+      );
     }
-    console.log(
-      "Sorry, I don't recognise that as a choice! \nPlease try 'rock', 'paper' or 'scissors' (without quotation marks)."
-    );
   }
 }
 
