@@ -1,12 +1,10 @@
 {
   "name": "mark-cli-proj--js-rock-paper-scissors",
   "version": "1.0.0",
-  "description": "",
   "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node src/index.js"
   },
-  "license": "ISC",
+  "license": "CC-BY-NC-ND-4.0",
   "dependencies": {
     "readline-sync": "^1.4.10"
   }
