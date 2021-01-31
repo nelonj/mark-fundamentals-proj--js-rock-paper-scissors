@@ -18,6 +18,8 @@ function declareWinner(userPick, computerPick) {
   }
 }
 
+function asStandardChoice(inputStr) {}
+
 function isWinningChoice(firstChoice, secondChoice) {
   const weaknesses = {
     rock: "paper",
