@@ -72,9 +72,9 @@ As a _learning exercise_ in reading and thinking about code, here are some steps
 
 ### a) Take some time to read and digest the code.
 
-Focus on forming a theory about how the programme is meant to work, through the lens of _ideas_ rather than the _syntax_.
+You should look through both the main code (`src/rock-paper-scissors.js`) as well as the test code (`src/rock-paper-scissors.test.js`) - as well as helping check functionality, tests also serve as documentation of a codebase and how things are meant to work.
 
-You won't understand everything straight away. That's okay! It is a different syntax to Python. However, the _ideas_ are very similar.
+(Notice that there isn't 100% test coverage - not all functions have tests written for them. This isn't uncommon in an actual codebase - most teams don't follow perfectly strict test-driven development.)
 
 ### b) Add comments for the parts you understand.
 
@@ -105,7 +105,7 @@ _(N.B. This documenting exercise is suggested as a learning tool rather than a p
 
 ### c) Google things you don't understand.
 
-We expect that there are things in the code which you won't immediately fathom (e.g. `Object.values).
+We expect that there are things in the code which you won't immediately fathom (e.g. `Object.values`).
 
 Google them and see if you can make sense of them!
 
@@ -120,7 +120,7 @@ Things you might try doing:
 
 ### e) Produce a narrative document.
 
-One way you could do this would be to explain a few different games of Rock Paper Scissors
+One way you could do this would be to explain a few different games of Rock Paper Scissors.
 
 A good narrative document for this game would walk through a few different games of Rock Paper Scissors and explain how the programme code is leading to the terminal output. (Screenshots of the terminal and/or snippets of programme code are likely to be helpful here.)
 
@@ -143,7 +143,9 @@ Amend the comments on your copy of the code for any important points that come o
 
 **Success criterion:** a game which can be playtested and which satisfies the specified requirements for each extension.
 
-### Extension 1: Rock Paper Scissors Lizard Spock
+We suggest you also use this as an opportunity to practice writing more tests!
+
+### Extension 1 (important): Rock Paper Scissors Lizard Spock
 
 Rock Paper Scissors often ends in draws - something which some people think is a feature, and others think is a bug!
 
@@ -157,7 +159,16 @@ Let's assume that reducing the likelihood of draws is desirable, and extend the 
 2. All five options (and tolerable variants) should be allowed as input from the user
 3. The programme should correctly report back the result of a match
 
-### Extension 2: replay in a case of draw
+<details>
+  <summary>Hints</summary>
+  <ul>
+    <li>`isWiningChoice` and `acceptableVariants` will need attention</li>
+    <li>The trickiest thing is probably now that a single choice has multiple weaknesses...</li>
+    <li>... but you might take inspiration from `acceptableVariants` and some code in `asStandardChoice`</li>
+  </ul>
+</details>
+
+### Extension 2 (less important): replay in a case of draw
 
 When you get a draw in RPS(cLSp), you often immediately replay the game.
 
