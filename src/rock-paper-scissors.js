@@ -10,6 +10,8 @@ const acceptableVariants = {
 function asStandardChoice(inputStr) {
   /** An nested array: array of array of strings */
   const arrayOfVariantArrays = Object.values(acceptableVariants);
+
+  // alternative `for ... of ...` loop syntax - great for arrays
   for (let variantArray of arrayOfVariantArrays) {
     if (variantArray.includes(inputStr)) {
       return variantArray[0];
