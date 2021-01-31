@@ -1,6 +1,3 @@
-const prompt = require("readline-sync").question;
-const { playRound } = require("./rock-paper-scissors");
-
 const acceptableVariants = {
   rock: ["rock", "Rock", "r", "R"],
   paper: ["paper", "Paper", "p", "P"],
@@ -54,4 +51,6 @@ function randomPick() {
   return computerChoice;
 }
 
-playRound();
+module.exports = {
+  playRound,
+};
