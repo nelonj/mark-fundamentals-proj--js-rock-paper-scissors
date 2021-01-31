@@ -14,6 +14,9 @@ function asStandardChoice(inputStr) {
   }
 }
 
+/**
+ * Check if the first choice beats the second choice
+ */
 function isWinningChoice(firstChoice, secondChoice) {
   const weaknesses = {
     rock: "paper",
@@ -51,7 +54,15 @@ function getUserChoice() {
   }
 }
 
-function makeResultMessage(userChoice, computerChoice) {}
+function makeResultMessage(userChoice, computerChoice) {
+  if (userChoice === computerChoice) {
+    return `You both chose ${computerChoice} - it's a draw!`;
+  } else if (isWinningChoice(userChoice, computerChoice)) {
+    return `Your ${userChoice} beat the computer's ${computerChoice}! You are a mighty champion!`;
+  } else {
+    return `The computer's ${computerChoice} beat your ${userChoice}! Bad luck...`;
+  }
+}
 
 function playRound() {
   const computerChoice = randomPick();
