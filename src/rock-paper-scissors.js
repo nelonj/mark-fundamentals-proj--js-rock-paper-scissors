@@ -7,6 +7,8 @@ const acceptableVariants = {
   rock: ["rock", "Rock", "r", "R"],
   paper: ["paper", "Paper", "p", "P"],
   scissors: ["scissors", "Scissors", "s", "S"],
+  lizard: ["lizard", "Lizard", "l", "L"],
+  spock: ["spock", "Spock", "sp", "Sp"]
 };
 
 
@@ -14,11 +16,10 @@ const acceptableVariants = {
 function asStandardChoice(inputStr) {
   /** An nested array: array of array of strings */
   const arrayOfVariantArrays = Object.values(acceptableVariants); // big array of 3 arrays of strings
-  console.log(arrayOfVariantArrays);
   // alternative `for ... of ...` loop syntax - great for arrays
   for (let variantArray of arrayOfVariantArrays) { // chooses a smaller array, and iterates through a number of times equivalent to items of larger array
     if (variantArray.includes(inputStr)) {
-      return variantArray[0];
+      return variantArray[0]; //can access specific values via indexes now because I've transformed the objects' values into independent arrays
     }
   }
 }
@@ -34,12 +35,26 @@ function declareWinner(userPick, computerPick) {
  */
 function isWinningChoice(userChoice, computerChoice) {
   const weaknesses = {  //an Object where values beat the keys
-    rock: "paper",
-    paper: "scissors",
-    scissors: "rock",
+    rock: ["paper", "spock"],
+    // rock: "spock",
+    paper: ["scissors", "lizard"],
+    // paper: "lizard",
+    scissors: ["rock", "spock"],
+    // scissors: "spock",
+    lizard: ["rock", "scissors"],
+    // lizard: "scissors",
+    spock: ["lizard", "paper"]
+    // spock: "paper"
   };
   // selects value, which is what will win over the computer's choice
-  return weaknesses[computerChoice] === userChoice; //returns a boolean
+  if (weaknesses[computerChoice].includes(userChoice)) {
+    return true
+  }
+  else {
+    return false
+  }
+
+//   return weaknesses[computerChoice] === userChoice; //returns a boolean
 }
 
 
@@ -47,7 +62,7 @@ function isWinningChoice(userChoice, computerChoice) {
 function getUserChoice() {
   // allows it to prompt again if I insert something that doesn't work + stops when i 'return' something that will terminate the function itself
   while (true) {
-    const answer = prompt("Your choice: rock, paper or scissors? \n> ");
+    const answer = prompt("Your choice: rock, paper, scissors, lizard or spock? \n> ");
     const standardisedChoice = asStandardChoice(answer);
     if (standardisedChoice) {
       // if choice can be standardised, we can exit out of the while loop with a return of the standardisd choice
@@ -55,7 +70,7 @@ function getUserChoice() {
     } else {
       // otherwise, log a helpful message and continue the while loop
       console.log(
-        "Sorry, I don't recognise that as a choice! \nPlease try 'rock', 'paper' or 'scissors' (without quotation marks)."
+        "Sorry, I don't recognise that as a choice! \nPlease try 'rock', 'paper', 'scissors', 'lizard' or 'spock' (without quotation marks)."
       );
     }
   }

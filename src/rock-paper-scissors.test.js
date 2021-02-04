@@ -34,6 +34,9 @@ test("isWinningChoice returns true if and only if first argument beats second ar
   expect(isWinningChoice("rock", "paper")).toBe(false);
   expect(isWinningChoice("rock", "scissors")).toBe(true);
 
+  expect(isWinningChoice("spock", "scissors")).toBe(true);
+  expect(isWinningChoice("paper", "spock")).toBe(true);
+
   expect(isWinningChoice("paper", "rock")).toBe(true);
   expect(isWinningChoice("paper", "paper")).toBe(false);
   expect(isWinningChoice("paper", "scissors")).toBe(false);
