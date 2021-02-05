@@ -30,6 +30,12 @@ function declareWinner(userPick, computerPick) {
   console.log(resultMessage);
 }
 
+function playAgain(userPick, computerPick) {
+  const resultMessage = `You both chose ${computerPick} - it's a draw! Let's play again.`; //could have been either
+  console.log(resultMessage);
+  playRound();
+}
+
 /**
  * Check if the first choice beats the second choice
  */
@@ -79,7 +85,7 @@ function getUserChoice() {
 // 2nd of 2 terminal outputs
 function makeResultMessage(userChoice, computerChoice) {
   if (userChoice === computerChoice) {
-    return `You both chose ${computerChoice} - it's a draw!`;
+    playAgain(userChoice, computerChoice);
   } else if (isWinningChoice(userChoice, computerChoice)) {
     return `Your ${userChoice} beat the computer's ${computerChoice}! You are a mighty champion!`;
   } else {
@@ -112,4 +118,5 @@ module.exports = {
   isWinningChoice,
   makeResultMessage,
   playRound,
+  playAgain
 };

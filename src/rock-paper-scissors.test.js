@@ -2,6 +2,7 @@ const {
   asStandardChoice,
   isWinningChoice,
   makeResultMessage,
+  playAgain
 } = require("./rock-paper-scissors");
 
 test("asStandardChoice returns a standardised choice version of a string", () => {
@@ -54,12 +55,12 @@ test("makeResultMessage returns a string reporting the result between player and
     "Your paper beat the computer's rock! You are a mighty champion!"
   );
 
-  expect(makeResultMessage("rock", "rock")).toBe(
-    "You both chose rock - it's a draw!"
-  );
-  expect(makeResultMessage("paper", "paper")).toBe(
-    "You both chose paper - it's a draw!"
-  );
+  // expect(makeResultMessage("rock", "rock")).toBe(
+  //   "You both chose rock - it's a draw!"
+  // );
+  // expect(makeResultMessage("paper", "paper")).toBe(
+  //   "You both chose paper - it's a draw!"
+  // );
 
   expect(makeResultMessage("rock", "paper")).toBe(
     "The computer's paper beat your rock! Bad luck..."
@@ -67,4 +68,5 @@ test("makeResultMessage returns a string reporting the result between player and
   expect(makeResultMessage("paper", "scissors")).toBe(
     "The computer's scissors beat your paper! Bad luck..."
   );
+  expect(makeResultMessage("rock", "rock")).toStrictEqual(playAgain("rock", "rock"));
 });
